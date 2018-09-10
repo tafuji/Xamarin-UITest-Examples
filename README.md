@@ -1,2 +1,2 @@
-# Xamarin-UITest-Examples
+# Xamarin-UITest-Samples
 Sample codes for Xamarin.UITest
