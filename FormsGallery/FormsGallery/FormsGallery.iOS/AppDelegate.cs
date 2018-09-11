@@ -22,6 +22,11 @@ namespace FormsGallery.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            // You need to add this compiler directive by yourself to prevent Xamarin.Calabash assembly from being included in your release build.
+            #if ENABLE_XAMARIN_UITEST
+            Xamarin.Calabash.Start();
+            #endif
+
             global::Xamarin.Forms.Forms.Init();
             Xamarin.FormsMaps.Init();
             LoadApplication(new App());
