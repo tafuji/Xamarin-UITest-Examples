@@ -12,7 +12,7 @@ namespace FormsGallery.ViewModels
     {
         INavigation navigation;
 
-        private string namespaceName = "FormsGallery";
+        private readonly string namespaceName = "FormsGallery";
 
         public MainPageViewModel(INavigation navigation)
         {
