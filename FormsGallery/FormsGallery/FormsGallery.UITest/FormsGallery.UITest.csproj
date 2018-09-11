@@ -35,8 +35,34 @@
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActivityIndicatorDemoPageTests.cs" />
+    <Compile Include="BoxViewDemoPageTests.cs" />
+    <Compile Include="ButtonDemoPageTests.cs" />
+    <Compile Include="CarouselPageDemoPageTests.cs" />
+    <Compile Include="DatePickerDemoPageTests.cs" />
+    <Compile Include="EditorDemoPageTests.cs" />
+    <Compile Include="EntryDemoPageTests.cs" />
+    <Compile Include="FrameDemoPageTests.cs" />
+    <Compile Include="ImageDemoPageTests.cs" />
+    <Compile Include="LabelDemoPageTests.cs" />
+    <Compile Include="ListViewDemoPageTests.cs" />
+    <Compile Include="MainPageObject.cs" />
+    <Compile Include="MasterDetailPageDemoPageTest.cs" />
+    <Compile Include="NavigationPageTests.cs" />
+    <Compile Include="PickerDemoPageTests.cs" />
+    <Compile Include="ProgressBarDemoPageTests.cs" />
+    <Compile Include="ReplTests.cs" />
+    <Compile Include="SearchBarDemoPageTests.cs" />
+    <Compile Include="SliderDemoPageTests.cs" />
+    <Compile Include="StepperDemoPageTests.cs" />
+    <Compile Include="SwitchDemoPageTests.cs" />
+    <Compile Include="TabbedPageDemoPageTests.cs" />
+    <Compile Include="TableViewDemoPageTests.cs" />
     <Compile Include="Tests.cs" />
     <Compile Include="AppInitializer.cs" />
+    <Compile Include="TimePickerDemoPageTests.cs" />
+    <Compile Include="ToolbarItemDemoPageTests.cs" />
+    <Compile Include="WebViewDemoPageTests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
