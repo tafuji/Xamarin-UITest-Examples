@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormsGallery.BoxViewDemoPage"
+             Title="BoxView">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+            <BoxView x:Name="MyBoxView" AutomationId="FormsGallery.BoxViewDemoPage.BoxView" Color="Blue" WidthRequest="150" HeightRequest="150">
+                <BoxView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding TapCommand}"/>
+                </BoxView.GestureRecognizers>
+            </BoxView>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="Click Count "/>
+                <Label AutomationId="FormsGallery.BoxViewDemoPage.CountLabel" Text="{Binding Count}"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

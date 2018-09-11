@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormsGallery.StepperDemoPage"
+             Title="Stepper">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center">
+            <Stepper AutomationId ="StepperDemoPage.Stepper" Minimum="0" Maximum="100" Value="{Binding Value}" HorizontalOptions="Center"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="Stepper Value is "/>
+                <Label AutomationId="FormsGallery.StepperDemoPage.ValueLabel" Text="{Binding Value}"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

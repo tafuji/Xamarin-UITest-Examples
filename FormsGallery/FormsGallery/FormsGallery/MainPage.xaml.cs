@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FormsGallery.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace FormsGallery
         public MainPage()
         {
             InitializeComponent();
+            this.BindingContext = new MainPageViewModel(this.Navigation);
         }
     }
 }

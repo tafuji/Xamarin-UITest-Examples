@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:FormsGallery"
+                  x:Class="FormsGallery.MasterDetailPageDemoPage"
+                  Title="Master Detail"
+                  IsPresented="{Binding IsPresented}">
+    <MasterDetailPage.Master>
+        <local:ColorListPage/>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <local:NamedColorPage Title="Detail"/>
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormsGallery.TableViewMenuDemoPage"
+             Title="TableView Menu">
+    <ContentPage.Content>
+        <TableView Intent="Menu" AutomationId="TableViewMenuDemoPage.TableView">
+            <TableRoot>
+                <TableSection Title="Views for Presentation">
+                    <TextCell Text="Label" Command="{Binding NavigateCommand}" CommandParameter="LabelDemoPage"/>
+                    <TextCell Text="Image" Command="{Binding NavigateCommand}" CommandParameter="ImageDemoPage" />
+                    <TextCell Text="BoxView" Command="{Binding NavigateCommand}" CommandParameter="BoxViewDemoPage" />
+                    <TextCell Text="WebView" Command="{Binding NavigateCommand}" CommandParameter="WebViewDemoPage" />
+                    <TextCell Text="Map" Command="{Binding NavigateCommand}" CommandParameter="MapDemoPage" />
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ContentPage.Content>
+</ContentPage>

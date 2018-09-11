@@ -2,13 +2,70 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:FormsGallery"
-             x:Class="FormsGallery.MainPage">
-
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+             x:Class="FormsGallery.MainPage"
+             Title="Forms Gallery">
+    <ContentPage.Content>
+        <TableView Intent="Menu" AutomationId="MainPage.TableView">
+            <TableRoot>
+                <TableSection Title="Views for Presentation">
+                    <TextCell Text="Label" Command="{Binding NavigateCommand}" CommandParameter="LabelDemoPage"/>
+                    <TextCell Text="Image" Command="{Binding NavigateCommand}" CommandParameter="ImageDemoPage" />
+                    <TextCell Text="BoxView" Command="{Binding NavigateCommand}" CommandParameter="BoxViewDemoPage" />
+                    <TextCell Text="WebView" Command="{Binding NavigateCommand}" CommandParameter="WebViewDemoPage" />
+                    <TextCell Text="Map" Command="{Binding NavigateCommand}" CommandParameter="MapDemoPage" />
+                </TableSection>
+                <TableSection Title="Views that Initiate Commands">
+                    <TextCell Text="Button" Command="{Binding NavigateCommand}" CommandParameter="ButtonDemoPage" />
+                    <TextCell Text="SearchBar" Command="{Binding NavigateCommand}" CommandParameter="SearchBarDemoPage" />
+                </TableSection>
+                <TableSection Title="Views for Common Data Types">
+                    <TextCell Text="Slider (double)" Command="{Binding NavigateCommand}" CommandParameter="SliderDemoPage" />
+                    <TextCell Text="Stepper (double)" Command="{Binding NavigateCommand}" CommandParameter="StepperDemoPage" />
+                    <TextCell Text="Switch (bool)" Command="{Binding NavigateCommand}" CommandParameter="SwitchDemoPage" />
+                    <TextCell Text="DatePicker" Command="{Binding NavigateCommand}" CommandParameter="DatePickerDemoPage" />
+                    <TextCell Text="TimePicker" Command="{Binding NavigateCommand}" CommandParameter="TimePickerDemoPage" />
+                </TableSection>
+                <TableSection Title="Views for Editing Text">
+                    <TextCell Text="Entry (single line)" Command="{Binding NavigateCommand}" CommandParameter="EntryDemoPage" />
+                    <TextCell Text="Editor (multiple lines)" Command="{Binding NavigateCommand}" CommandParameter="EditorDemoPage" />
+                </TableSection>
+                <TableSection Title="Views to Indicate Activity">
+                    <TextCell Text="ActivityIndicator" Command="{Binding NavigateCommand}" CommandParameter="ActivityIndicatorDemoPage" />
+                    <TextCell Text="ProgressBar" Command="{Binding NavigateCommand}" CommandParameter="ProgressBarDemoPage" />
+                </TableSection>
+                <TableSection Title="Views that Display Collections">
+                    <TextCell Text="Picker" Command="{Binding NavigateCommand}" CommandParameter="PickerDemoPage" />
+                    <TextCell Text="ListView" Command="{Binding NavigateCommand}" CommandParameter="ListViewDemoPage" />
+                    <TextCell Text="TableView for a menu" Command="{Binding NavigateCommand}" CommandParameter="TableViewMenuDemoPage" />
+                    <TextCell Text="TableView for a form" Command="{Binding NavigateCommand}" CommandParameter="TableViewFormDemoPage" />
+                </TableSection>
+                <TableSection Title="Cells">
+                    <TextCell Text="TextCell" Command="{Binding NavigateCommand}" CommandParameter="TextCellDemoPage" />
+                    <TextCell Text="ImageCell" Command="{Binding NavigateCommand}" CommandParameter="ImageCellDemoPage" />
+                    <TextCell Text="SwitchCell" Command="{Binding NavigateCommand}" CommandParameter="SwitchCellDemoPage" />
+                    <TextCell Text="EntryCell" Command="{Binding NavigateCommand}" CommandParameter="EntryCellDemoPage" />
+                </TableSection>
+                <TableSection Title="Layouts with Single Content">
+                    <TextCell Text="ContentView" Command="{Binding NavigateCommand}" CommandParameter="ContentViewDemoPage" />
+                    <TextCell Text="Frame" Command="{Binding NavigateCommand}" CommandParameter="FrameDemoPage" />
+                    <TextCell Text="ScrollView" Command="{Binding NavigateCommand}" CommandParameter="ScrollViewDemoPage" />
+                </TableSection>
+                <TableSection Title="Layouts with Multiple Children">
+                    <TextCell Text="StackLayout" Command="{Binding NavigateCommand}" CommandParameter="StackLayoutDemoPage" />
+                    <TextCell Text="AbsoluteLayout" Command="{Binding NavigateCommand}" CommandParameter="AbsoluteLayoutDemoPage" />
+                    <TextCell Text="Grid" Command="{Binding NavigateCommand}" CommandParameter="GridDemoPage" />
+                    <TextCell Text="RelativeLayout" Command="{Binding NavigateCommand}" CommandParameter="RelativeLayoutDemoPage" />
+                </TableSection>
+                <TableSection Title="Pages">
+                    <TextCell Text="ContentPage" Command="{Binding NavigateCommand}" CommandParameter="ContentPageDemoPage" />
+                    <TextCell Text="NavigationPage" Command="{Binding NavigateCommand}" CommandParameter="NavigationPageDemoPage" />
+                    <TextCell Text="MasterDetailPage" Command="{Binding NavigateCommand}" CommandParameter="MasterDetailPageDemoPage" />
+                    <TextCell Text="TabbedPage" Command="{Binding NavigateCommand}" CommandParameter="TabbedPageDemoPage" />
+                    <TextCell Text="CarouselPage" Command="{Binding NavigateCommand}" CommandParameter="CarouselPageDemoPage" />
+                    <TextCell Text="ToolbarItem" Command="{Binding NavigateCommand}" CommandParameter="ToolbarItemDemoPage" />
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ContentPage.Content>
 
 </ContentPage>

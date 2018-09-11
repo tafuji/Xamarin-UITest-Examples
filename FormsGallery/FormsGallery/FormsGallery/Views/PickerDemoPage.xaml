@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormsGallery.PickerDemoPage"
+             Title="Picker">
+    <ContentPage.Content>
+        <StackLayout>
+            <Picker AutomationId="PickerDemoPage.Picker" Title="Color" VerticalOptions="CenterAndExpand" ItemsSource="{Binding PickerItems}" SelectedItem="{Binding SelectedColor}"/>
+            <BoxView WidthRequest = "150" HeightRequest = "150" HorizontalOptions = "Center" VerticalOptions = "CenterAndExpand" Color="{Binding BoxColor}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

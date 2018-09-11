@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormsGallery.TableViewFormDemoPage"
+             Title="Table View for a form">
+    <ContentPage.Content>
+        <TableView  AutomationId="TableViewFormDemoPage.TableView" Intent="Form">
+            <TableSection Title="Table Section">
+                <TextCell AutomationId="TextCell" Detail="With Detail Text"  Text="Text Cell"/>
+                <ImageCell AutomationId="ImageCell" Text="Image Cell" ImageSource="https://www.xamarin.com/content/images/pages/branding/assets/xamagon.png"/>
+                <SwitchCell AutomationId="SwitchCell" Text="Switch Cell" IsEnabled="False"/>
+                <EntryCell AutomationId="EntryCell" Label="Entry Cell" Placeholder="Type text here"/>
+                <ViewCell AutomationId="ViewCell">
+                    <StackLayout>
+                        <Label AutomationId="ViewCell.Label" Text="A ViewCell can be anything you want!"/>
+                    </StackLayout>
+                </ViewCell>
+            </TableSection>
+        </TableView>
+    </ContentPage.Content>
+</ContentPage>

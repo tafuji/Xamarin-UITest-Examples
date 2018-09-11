@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="FormsGallery.TabbedPageDemoPage"
+            xmlns:local="clr-namespace:FormsGallery"
+            Title="TabbedPage">
+    <TabbedPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0"/>
+    </TabbedPage.Padding>
+    <TabbedPage.Children>
+        <local:Page1 Title="Tab1" Icon="user.png"/>
+        <local:Page2 Title="Tab2" Icon="calendar.png"/>
+        <local:Page3 Title="Tab3" Icon="settings.png"/>
+    </TabbedPage.Children>
+</TabbedPage>
