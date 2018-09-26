@@ -9,12 +9,12 @@ namespace HelloXamarin.UITest
 {
     [TestFixture(Platform.Android)]
     //[TestFixture(Platform.iOS)]
-    public class Tests
+    public class TapButtonMainPage
     {
         IApp app;
         Platform platform;
 
-        public Tests(Platform platform)
+        public TapButtonMainPage(Platform platform)
         {
             this.platform = platform;
         }
@@ -26,10 +26,10 @@ namespace HelloXamarin.UITest
         }
 
         [Test]
-        public void WelcomeTextIsDisplayed()
+        public void TabButtonAndHelloUITestDisplay()
         {
-            AppResult[] results = app.WaitForElement(c => c.Marked("Welcome to Xamarin.Forms!"));
-            app.Screenshot("Welcome screen");
+            app.Tap(c => c.Marked("MainPage.Button"));
+            AppResult[] results = app.WaitForElement(c => c.Marked("Hello, Xamarin UITest!"));
             Assert.IsTrue(results.Any());
         }
     }
