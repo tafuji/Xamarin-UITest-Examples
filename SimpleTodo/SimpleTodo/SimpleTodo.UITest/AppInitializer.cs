@@ -10,7 +10,7 @@ namespace SimpleTodo.UITest
         {
             if (platform == Platform.Android)
             {
-                return ConfigureApp.Android.StartApp();
+                return ConfigureApp.Android.InstalledApp("com.tafuji.SimpleTodo").EnableLocalScreenshots().StartApp();
             }
 
             return ConfigureApp.iOS.StartApp();
