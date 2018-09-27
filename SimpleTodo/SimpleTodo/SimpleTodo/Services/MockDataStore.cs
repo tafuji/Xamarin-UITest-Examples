@@ -15,12 +15,12 @@ namespace SimpleTodo.Services
             items = new List<Item>();
             var mockItems = new List<Item>
             {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "First item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Third item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fourth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fifth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "🐱 のご飯を買う", Description="This is an item description.", DueDate = DateTimeOffset.UtcNow.AddDays(0) },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description." ,DueDate = DateTimeOffset.UtcNow.AddDays(2)},
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Third item", Description="This is an item description.", DueDate = DateTimeOffset.UtcNow.AddDays(3) },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Fourth item", Description="This is an item description.", DueDate = DateTimeOffset.UtcNow.AddDays(5) },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Fifth item", Description="This is an item description.", DueDate = DateTimeOffset.UtcNow.AddDays(7) },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description.", DueDate = DateTimeOffset.UtcNow.AddDays(10) },
             };
 
             foreach (var item in mockItems)

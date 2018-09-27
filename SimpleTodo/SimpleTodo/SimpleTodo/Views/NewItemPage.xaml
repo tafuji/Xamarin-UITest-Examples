@@ -23,10 +23,12 @@
     
     <ContentPage.Content>
         <StackLayout Spacing="20" Padding="15">
-            <Label Text="Text" FontSize="Medium" />
-            <Entry Text="{Binding Item.Text}" FontSize="Small" />
+            <Label Text="Title" FontSize="Medium" />
+            <Entry AutomationId="NewItemPage.Title"  Text="{Binding Item.Text}" FontSize="Small" />
+            <Label Text="Title" FontSize="Medium" />
+            <DatePicker AutomationId="NewItemPage.DatePicker" Date="{Binding Item.DueDate.Date}" Format="yyyy/MM/dd" FontSize="Small" />
             <Label Text="Description" FontSize="Medium" />
-            <Editor Text="{Binding Item.Description}" FontSize="Small" Margin="0" />
+            <Editor AutomationId="NewItemPage.Description" Text="{Binding Item.Description}" FontSize="Small" Margin="0" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

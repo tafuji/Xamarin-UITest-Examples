@@ -15,8 +15,9 @@
     </ContentPage.ToolbarItems>
 
     <StackLayout>
-        <ListView x:Name="ItemsListView"
-                ItemsSource="{Binding Items}"
+        <ListView AutomationId="ItemsPage.TodoList"
+                  x:Name="ItemsListView"
+                  ItemsSource="{Binding Items}"
                 VerticalOptions="FillAndExpand"
                 HasUnevenRows="true"
                 RefreshCommand="{Binding LoadItemsCommand}"
@@ -28,14 +29,20 @@
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Padding="10">
-                            <Label Text="{Binding Text}" 
+                            <Label AutomationId="Item.Title"
+                                Text="{Binding Text}" 
                                 LineBreakMode="NoWrap" 
                                 Style="{DynamicResource ListItemTextStyle}" 
                                 FontSize="16" />
-                            <Label Text="{Binding Description}" 
+                            <Label AutomationId="Item.Description"
+                                Text="{Binding Description}" 
                                 LineBreakMode="NoWrap"
                                 Style="{DynamicResource ListItemDetailTextStyle}"
                                 FontSize="13" />
+                            <Label AutomationId="Item.DueDate"
+                                Text="{Binding DueDate, StringFormat='{0:yyyy/MM/dd}'}"
+                                   Style="{DynamicResource ListItemDetailTextStyle}"
+                                   FontSize="10" />
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
