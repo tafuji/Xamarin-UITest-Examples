@@ -32,6 +32,9 @@ namespace SimpleTodo.Views
                     case (int)MenuItemType.About:
                         MenuPages.Add(id, new NavigationPage(new AboutPage()));
                         break;
+                    case (int)MenuItemType.WebView:
+                        MenuPages.Add(id, new NavigationPage(new WebView()));
+                        break;
                 }
             }
 

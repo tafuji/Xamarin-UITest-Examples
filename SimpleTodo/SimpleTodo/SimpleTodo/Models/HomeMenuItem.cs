@@ -7,7 +7,8 @@ namespace SimpleTodo.Models
     public enum MenuItemType
     {
         Browse,
-        About
+        About,
+        WebView
     }
     public class HomeMenuItem
     {

@@ -26,7 +26,7 @@
             <Label Text="Title" FontSize="Medium" />
             <Entry AutomationId="NewItemPage.Title"  Text="{Binding Item.Text}" FontSize="Small" />
             <Label Text="Title" FontSize="Medium" />
-            <DatePicker AutomationId="NewItemPage.DatePicker" Date="{Binding Item.DueDate.Date}" Format="yyyy/MM/dd" FontSize="Small" />
+            <DatePicker AutomationId="NewItemPage.DatePicker" Date="{Binding Item.DueDate, Mode=TwoWay}" Format="yyyy/MM/dd" FontSize="Small" />
             <Label Text="Description" FontSize="Medium" />
             <Editor AutomationId="NewItemPage.Description" Text="{Binding Item.Description}" FontSize="Small" Margin="0" />
         </StackLayout>

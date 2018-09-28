@@ -20,7 +20,7 @@ namespace SimpleTodo.Views
             Item = new Item
             {
                 Text = "Item name",
-                DueDate = DateTimeOffset.Now,
+                DueDate = DateTime.Now,
                 Description = "This is an item description."
             };
 

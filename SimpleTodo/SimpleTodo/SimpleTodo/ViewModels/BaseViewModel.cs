@@ -12,7 +12,20 @@ namespace SimpleTodo.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>() ?? new MockDataStore();
+        private static IDataStore<Item> _ds;
+
+        public static IDataStore<Item> DataStore
+        {
+            get
+            {
+                if(_ds == null)
+                {
+                    _ds = DependencyService.Get<IDataStore<Item>>() ?? new MockDataStore();
+
+                }
+                return _ds;
+            }
+        }
 
         bool isBusy = false;
         public bool IsBusy

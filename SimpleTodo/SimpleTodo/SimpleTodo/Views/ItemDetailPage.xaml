@@ -5,10 +5,10 @@
              Title="{Binding Title}">
     <StackLayout Spacing="20" Padding="15">
         <Label Text="Title:" FontSize="Medium" />
-        <Label Text="{Binding Item.Text}" FontSize="Small"/>
+        <Label AutomationId ="ItemDetailPage.Title" Text="{Binding Item.Text}" FontSize="Small"/>
         <Label Text="Due Date:" FontSize="Medium" />
-        <Label Text="{Binding Item.DueDate, StringFormat='{0:yyyy/MM/dd}'}" FontSize="Small"/>
+        <Label AutomationId ="ItemDetailPage.DueDate" Text="{Binding Item.DueDate, StringFormat='{0:yyyy/MM/dd}'}" FontSize="Small"/>
         <Label Text="Description:" FontSize="Medium" />
-        <Label Text="{Binding Item.Description}" FontSize="Small"/>
+        <Label AutomationId="ItemDetailPage.Description" Text="{Binding Item.Description}" FontSize="Small"/>
     </StackLayout>
 </ContentPage>
