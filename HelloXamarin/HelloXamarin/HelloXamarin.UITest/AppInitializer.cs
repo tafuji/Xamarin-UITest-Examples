@@ -10,7 +10,11 @@ namespace HelloXamarin.UITest
         {
             if (platform == Platform.Android)
             {
-                return ConfigureApp.Android.EnableLocalScreenshots().InstalledApp("com.tafuji.HelloXamarin").StartApp();
+                return ConfigureApp
+                    .Android
+                    .EnableLocalScreenshots()
+                    .InstalledApp("com.tafuji.HelloXamarin")
+                    .StartApp();
             }
 
             return ConfigureApp.iOS.StartApp();
