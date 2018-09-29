@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormsGallery.SearchBarDemoPage"
+             Title="SearchBar">
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar AutomationId="SearchBarDemoPage.SearchBar" x:Name="SampleSearchBar" Text="{Binding SearchWord}" SearchCommand="{Binding SearchCommand}" SearchCommandParameter="{Binding SearchWord}" Placeholder="Xamarin.Forms Property"/>
+            <ListView ItemsSource="{Binding Result}" RowHeight="60">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Margin="20,0,20,0" VerticalOptions="Center">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Type name: "/>
+                                    <Label Text="{Binding TypeName}"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Property type name: "/>
+                                    <Label Text="{Binding PropertyTypeName}"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormsGallery.EntryDemoPage"
+             Title="Entry">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Entry AutomationId="EntryDemoPage.MailEntry" Placeholder="Enter email address"/>
+            <Entry AutomationId="EntryDemoPage.Password" Placeholder="Enter password" IsPassword="True"/>
+            <Entry AutomationId="EntryDemoPage.PhoneNumber" Placeholder="Enter phone number"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

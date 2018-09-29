@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="FormsGallery.MapDemoPage"
+             Title="Map">
+    <ContentPage.Content>
+        <StackLayout>
+          <maps:Map  AutomationId="FormsGallery.MapDemoPage"
+                     VerticalOptions="FillAndExpand" 
+                     HorizontalOptions="FillAndExpand"
+                     MapType="Street"  
+                     IsShowingUser="True"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
